@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp" 
+    tools:context=".EditItemActivity"> 
+
+    <TextView
+        android:id="@+id/tvEditItemMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/edit_item_message"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/etEditItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvEditItemMsg"
+        android:layout_below="@+id/tvEditItemMsg"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textMultiLine" 
+        android:hint="@string/edit_prompt">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnSaveEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etEditItem"
+        android:layout_below="@+id/etEditItem"
+        android:layout_marginTop="21dp"
+        android:text="@string/save_label" 
+        android:onClick="saveEditedItem"/>
+    
+</RelativeLayout>
